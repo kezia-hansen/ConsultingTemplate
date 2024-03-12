@@ -3,24 +3,20 @@ import "../styles/global.css";
 import "../styles/reset.css";
 ---
 
-<section class="container">
-  <div class="hero-image">
-    <img src="../images/heroimage.jpg" alt="hero image" />
-  </div>
-  <style>
-    .container {
-      width: 100%;
-      overflow: hidden;
-    }
+<div class="hero-image">
+  <img src="../images/heroimage.jpg" alt="hero image" />
 
+  <style>
     .hero-image {
-      height: 100%;
-      width: 100%;
+      width: 125.125rem;
+      height: 83.4375rem;
+      flex-shrink: 0;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      position: relative;
+      position: fixed;
+      margin-top: 50px;
       z-index: -1;
     }
   </style>
-</section>
+</div>

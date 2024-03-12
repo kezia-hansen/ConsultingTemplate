@@ -1,0 +1,34 @@
+---
+import HeadingPill from "../components/HeadingPill.astro";
+---
+
+<section>
+  <HeadingPill />
+  <p>Creative Services For Boost Your Business Growth</p>
+</section>
+
+<style>
+  section {
+    display: block; /* change to block or flex */
+    padding: 3rem 3.75rem 3.625rem 3.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    background: #fff;
+    width: fit-content;
+    border-radius: 1.8125rem;
+    justify-content: center;
+    align-items: center;
+    height: 20rem; /* add a specific height */
+
+    > p {
+      color: #000;
+      font-family: "Cabin", sans-serif;
+      font-size: 3.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 3.625rem;
+      width: 41.75rem;
+    }
+  }
+</style>
