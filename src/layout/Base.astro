@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import "../styles/reset.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Astro</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <slot />
+    </main>
+    <footer></footer>
+  </body>
+</html>
+
+<style>
+  header,
+  footer {
+    background: black;
+    height: 80px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto / [full-start] 1fr [content] minmax(0, var(--content-width)) 1fr[full-end];
+    gap: 1rem;
+
+    > * {
+      grid-column: content;
+    }
+
+    .full {
+      grid-column: full;
+    }
+  }
+</style>

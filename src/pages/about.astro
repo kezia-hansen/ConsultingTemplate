@@ -1,0 +1,26 @@
+---
+import Base from "../layout/Base.astro";
+---
+
+<Base>
+  <section class="full">
+    <p>Lorem, ipsum dolor sit.</p>
+  </section>
+</Base>
+
+<style>
+  section {
+    background: red;
+    display: grid;
+    grid-template-columns: auto / [full-start] 1fr [content] minmax(0, var(--content-width)) 1fr[full-end];
+    gap: 1rem;
+
+    > * {
+      grid-column: content;
+    }
+
+    .full {
+      grid-column: full;
+    }
+  }
+</style>

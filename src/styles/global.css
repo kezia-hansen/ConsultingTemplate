@@ -1,7 +1,18 @@
-:root {
-    --content-width: 75rem;
-    --color-text: ?;
+@import url("./reset.css");
+
+
+@layer global {
+    :root {
+        --content-width: 75rem;
+    }
+
+    html {
+        line-height: 1.457;
+
+    }
 }
+
+
 
 .cabin-regular {
     font-family: "Cabin", sans-serif;
