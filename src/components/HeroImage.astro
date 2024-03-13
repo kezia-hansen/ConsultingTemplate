@@ -1,22 +1,18 @@
 ---
-import "../styles/global.css";
-import "../styles/reset.css";
+const { img } = Astro.props;
 ---
 
-<div class="hero-image">
-  <img src="../images/heroimage.jpg" alt="hero image" />
+<img src={img} alt="Hero Image" />
 
-  <style>
-    .hero-image {
-      width: 125.125rem;
-      height: 83.4375rem;
-      flex-shrink: 0;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: fixed;
-      margin-top: 50px;
-      z-index: -1;
-    }
-  </style>
-</div>
+<style>
+  .hero-image {
+    width: 125.125rem;
+    height: 83.4375rem;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    margin: 0;
+    padding: 0;
+  }
+</style>
