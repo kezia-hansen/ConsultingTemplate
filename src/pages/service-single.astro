@@ -5,14 +5,14 @@ import Columns from "../components/Columns.astro";
 import Card from "../components/Card.astro";
 import HeroImage from "../components/HeroImage.astro";
 import Checkmark from "../components/Checkmark.astro";
-import ImgPattern from "../components/ImgPattern.astro";
+import ServiceImgPattern from "../components/ServiceImgPattern.astro";
 import HeadingPill from "../components/HeadingPill.astro";
 import Titlep from "../components/Titlep.astro";
 import TemporaryContainer from "../components/TemporaryContainer.astro";
-import Number from "../components/Number.astro";
+import Brand from "../components/Brand.astro";
 import ServiceScrolling from "../components/ServiceScrolling.astro";
 import Button from "../components/Button.astro";
-import VideoPattern from "../components/VideoPattern.astro";
+import ServiceVideoPattern from "../components/ServiceVideoPattern.astro";
 import TeamContainer from "../components/TeamContainer.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -23,8 +23,8 @@ import { Icon } from "astro-icon/components";
   </section>
   <section class="full">
     <div>
-      <HeadingPill title="Our core values & principles" variant="primary" />
-      <Titlep bigtitle="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+      <Icon name="coloredchart" />
+      <Titlep bigtitle="Financial Projections" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
     </div>
     <!-- <Columns cols="4">
       <CardTest title="Creative Ideas" variant="primary" />
@@ -37,20 +37,20 @@ import { Icon } from "astro-icon/components";
   </section>
   <section style="margin-top: 4rem;">
     <Columns cols="2">
+      <ServiceImgPattern />
       <div>
-        <HeadingPill title="OUR VISION" variant="secondary" />
-        <Titlep bigtitle="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+        <HeadingPill title="WE'LL WORK WITH YOU" variant="primary" />
+        <Titlep bigtitle="What To Expect" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
         <Checkmark />
       </div>
-      <ImgPattern />
     </Columns>
-    <Number />
+    <Brand />
   </section>
 
   <section>
     <HeadingPill title="Our History" variant="secondary" />
     <Titlep bigtitle="Turn your ideas into reality." text="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements." />
-    <VideoPattern />
+    <ServiceVideoPattern />
   </section>
   <section>
     <HeadingPill title="Our team" variant="primary" />
@@ -58,7 +58,7 @@ import { Icon } from "astro-icon/components";
     <TeamContainer />
   </section>
   <section style="margin-bottom: 8rem;">
-    <TemporaryContainer />
+    <TemporaryContainer img="../images/temporary2.jpg" />
   </section>
 </Base>
 
@@ -89,6 +89,16 @@ import { Icon } from "astro-icon/components";
       display: flex;
       justify-content: center;
       flex-direction: column;
+    }
+
+    [data-icon="coloredchart"] {
+      width: 6.58675rem;
+      height: 4.44144rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.375rem;
+      margin-bottom: 1.375rem;
     }
   }
 </style>

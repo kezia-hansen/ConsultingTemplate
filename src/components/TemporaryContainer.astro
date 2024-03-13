@@ -1,10 +1,11 @@
 ---
 import "../styles/global.css";
 import "../styles/reset.css";
+const { img } = Astro.props;
 ---
 
 <figure>
-  <img src="../images/temporary.jpg" alt="temporary image" />
+  <img src={img} alt="temporary image" />
 </figure>
 
 <style>
