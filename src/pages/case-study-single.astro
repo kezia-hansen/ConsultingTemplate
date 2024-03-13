@@ -2,9 +2,11 @@
 import Base from "../layouts/Base.astro";
 import CardTest from "../components/CardTest.astro";
 import Columns from "../components/Columns.astro";
+import HeroImage from "../components/HeroImage.astro";
 ---
 
-<Base img="../images/case-hero.jpg">
+<Base>
+  <HeroImage img="../images/case-hero.jpg" />
   <section class="full">
     <Columns cols="4">
       <CardTest title="Creative Ideas" variant="primary" />
