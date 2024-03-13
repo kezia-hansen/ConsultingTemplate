@@ -2,38 +2,75 @@
 import Base from "../layouts/Base.astro";
 import CardTest from "../components/CardTest.astro";
 import Columns from "../components/Columns.astro";
+import Card from "../components/Card.astro";
 import HeroImage from "../components/HeroImage.astro";
+import Checkmark from "../components/Checkmark.astro";
+import ImgPattern from "../components/ImgPattern.astro";
+import HeadingPill from "../components/HeadingPill.astro";
+import Titlep from "../components/Titlep.astro";
+import TemporaryContainer from "../components/TemporaryContainer.astro";
+import Number from "../components/Number.astro";
+import ServiceScrolling from "../components/ServiceScrolling.astro";
+import Button from "../components/Button.astro";
+import VideoPattern from "../components/VideoPattern.astro";
+import TeamContainer from "../components/TeamContainer.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Base>
-  <HeroImage img="../images/service-hero.jpg" />
-
   <section class="full">
-    <Columns cols="4">
+    <HeroImage img="../images/service-hero.jpg" />
+  </section>
+  <section class="full">
+    <div>
+      <HeadingPill title="Our core values & principles" variant="primary" />
+      <Titlep bigtitle="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+    </div>
+    <!-- <Columns cols="4">
       <CardTest title="Creative Ideas" variant="primary" />
       <CardTest title="Best Features" variant="secondary" />
       <CardTest title="Experience" variant="primary" />
       <CardTest title="Easy Solutions" variant="secondary" />
+    </Columns> -->
+
+    <ServiceScrolling />
+  </section>
+  <section style="margin-top: 4rem;">
+    <Columns cols="2">
+      <div>
+        <HeadingPill title="OUR VISION" variant="secondary" />
+        <Titlep bigtitle="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+        <Checkmark />
+      </div>
+      <ImgPattern />
     </Columns>
-    <Columns cols="3">
-      <CardTest title="Creative Ideas" variant="primary" />
-      <CardTest title="Best Features" variant="secondary" />
-      <CardTest title="Experience" variant="primary" />
-    </Columns>
+    <Number />
+  </section>
+
+  <section>
+    <HeadingPill title="Our History" variant="secondary" />
+    <Titlep bigtitle="Turn your ideas into reality." text="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements." />
+    <VideoPattern />
+  </section>
+  <section>
+    <HeadingPill title="Our team" variant="primary" />
+    <Titlep bigtitle="We champion the bold to achieve the extraordinary" text="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements." />
+    <TeamContainer />
+  </section>
+  <section style="margin-bottom: 8rem;">
+    <TemporaryContainer />
   </section>
 </Base>
 
 <style>
   section {
-    background: lightslategray;
-
     display: grid;
     grid:
       auto /
       [full-start] 1fr
       [content] minmax(0, var(--content-width))
       1fr [full-end];
-    gap: 1rem;
+    gap: 6rem 4rem;
 
     > * {
       grid-column: content;
@@ -41,6 +78,17 @@ import HeroImage from "../components/HeroImage.astro";
 
     .full {
       grid-column: full;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 </style>

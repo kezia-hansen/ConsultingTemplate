@@ -7,7 +7,7 @@ import { Icon } from "astro-icon/components";
 <main>
   <section class="full">
     <ul role="list">
-      <li>
+      <li class="bg-primary">
         <Icon name="folder" />
         <h3>Creative Ideas</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
@@ -15,7 +15,7 @@ import { Icon } from "astro-icon/components";
         <a href="#">Read More <Icon name="arrow" /> </a>
       </li>
 
-      <li>
+      <li class="bg-secondary">
         <Icon name="barChart" />
         <h3>Best Features</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -90,10 +90,8 @@ import { Icon } from "astro-icon/components";
 
     li {
       flex-basis: min(400px, 90%);
-      color: #595566;
       border-radius: 1.25rem;
       border: 1px solid #eaeaea;
-      background: #fff;
       font-size: 1rem;
       padding: 2.75rem 2.1875rem;
       align-self: start;
