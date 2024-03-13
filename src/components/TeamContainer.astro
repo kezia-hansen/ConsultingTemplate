@@ -1,0 +1,199 @@
+---
+import "../styles/global.css";
+import "../styles/reset.css";
+import { Icon } from "astro-icon/components";
+---
+
+<main>
+  <section class="full">
+    <header>
+      <p class="heading">We champion the bold to achieve the extraordinary</p>
+      <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+    </header>
+
+    <ul role="list">
+      <li>
+        <img src="../images/sarah.jpg" alt="Sarah" />
+        <h3>Sarah Jasmine</h3>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+        <br />
+        <div class="icon-container">
+          <Icon name="instagram" />
+          <Icon name="facebook" />
+          <Icon name="twitter" />
+        </div>
+      </li>
+
+      <li>
+        <img src="../images/john.jpg" alt="Sarah" />
+        <h3>John Carter</h3>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+        <br />
+        <div class="icon-container">
+          <Icon name="instagram" />
+          <Icon name="facebook" />
+          <Icon name="twitter" />
+        </div>
+      </li>
+
+      <li>
+        <img src="../images/daisy.jpg" alt="Sarah" />
+        <h3>Daisy Stella</h3>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+        <br />
+        <div class="icon-container">
+          <Icon name="instagram" />
+          <Icon name="facebook" />
+          <Icon name="twitter" />
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<style>
+  main {
+    padding-block: 4rem;
+    display: grid;
+    grid:
+      auto /
+      [full-start]
+      1fr
+      [content]
+      minmax(0, var(--content-width))
+      1fr
+      [full-end];
+    column-gap: 1rem;
+
+    > * {
+      grid-column: 2;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+      display: grid;
+      grid: auto / subgrid;
+      row-gap: 3rem;
+
+      > * {
+        grid-column: 2;
+      }
+
+      > ul {
+        scroll-snap-type: x mandatory;
+        grid-column: 1 / -1;
+        padding-inline: max(1rem, 50% - var(--content-width) / 2);
+        padding-block-end: 1rem;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5625rem;
+
+    li {
+      flex-basis: min(400px, 90%);
+      color: #595566;
+      border-radius: 1.25rem;
+      background: #fff;
+      font-size: 1rem;
+      padding: 2.75rem 2.1875rem;
+      align-self: center;
+      text-align: center;
+
+      width: 17rem;
+      padding: 2.25rem 1.4375rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+
+    h3 {
+      color: #181818;
+      font-family: "Cabin", sans-serif;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.45rem;
+      margin-top: 1.25rem;
+    }
+
+    p {
+      color: #595566;
+      font-family: Lato;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.475rem;
+      width: 20.5rem;
+      text-align: center;
+    }
+
+    img {
+      border-radius: 1.8125rem;
+    }
+  }
+
+  .heading,
+  h3 {
+    all: revert;
+    color: #181818;
+    margin-block: 0 0.625rem;
+    line-height: 1.125;
+  }
+
+  .heading {
+    color: #181818;
+    font-family: "Cabin", sans-serif;
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.2625rem;
+    width: 31.125rem;
+    height: 6.625rem;
+  }
+
+  .heading + p {
+    color: #595566;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.475rem;
+    width: 40.1875rem;
+  }
+  header {
+    color: #595566;
+
+    p {
+      max-inline-size: 67ch;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8125rem;
+    flex-direction: row;
+  }
+
+  [data-icon="instagram"] {
+    width: 1.50038rem;
+    height: 1.44381rem;
+  }
+
+  [data-icon="facebook"] {
+    width: 1.50038rem;
+    height: 1.44381rem;
+  }
+
+  [data-icon="twitter"] {
+    width: 1.50038rem;
+    height: 1.44381rem;
+  }
+</style>
