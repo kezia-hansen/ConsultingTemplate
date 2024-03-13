@@ -1,0 +1,37 @@
+---
+const { bigtitle, text } = Astro.props;
+---
+
+<header>
+  <p class="heading">{bigtitle}</p>
+  <p>{text}</p>
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+
+  .heading {
+    color: #181818;
+    font-family: "Cabin", sans-serif;
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 116%; /* 3.2625rem */
+  }
+
+  p {
+    color: #595566;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 147.5%; /* 1.475rem */
+
+    width: 36.875rem;
+  }
+</style>

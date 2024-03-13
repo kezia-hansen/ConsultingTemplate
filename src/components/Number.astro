@@ -23,31 +23,56 @@ import "../styles/reset.css";
 </dl>
 
 <style>
-  dl {
+  /*   dl {
     display: flex;
     width: 55.9375rem;
     justify-content: center;
     align-items: flex-start;
     gap: 8.4375rem;
+    font-family: "Cabin", sans-serif;
   }
 
   dt {
     color: #181818;
-    font-family: Cabin;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.305rem; /* 1.305rem */
-    order: 1; /* Ensure the dt comes after dd */
+    line-height: 1.305rem;
+    order: 0;
   }
 
   dd {
     color: #181818;
-    font-family: Cabin;
     font-size: 3.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3.625rem; /* 3.625rem */
-    order: 0; /* Ensure the dd comes before dt */
+    line-height: 3.625rem;
+    order: 1;
+  } */
+
+  dl {
+    font-family: "Cabin", sans-serif;
+    margin: 3rem;
+    text-align: center;
+    color: #181818;
+
+    display: flex;
+    width: 55.9375rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8.4375rem;
+    white-space: nowrap;
+
+    > * {
+      display: flex;
+      flex-direction: column-reverse;
+      font-size: 1.125rem;
+      color: #181818;
+
+      :last-child {
+        font-size: 3.125rem;
+        font-weight: 500;
+      }
+    }
   }
 </style>
