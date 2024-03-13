@@ -1,0 +1,26 @@
+---
+const { title, variant } = Astro.props;
+---
+
+<article data-variant={variant}>
+  <h3>{title}</h3>
+  <p>Lorem ipsum dolor sit amet consectetur.</p>
+  <a href="#">Read More</a>
+</article>
+
+<style>
+  article {
+    background: #fff;
+    padding: 1rem;
+  }
+
+  [data-variant="primary"] {
+    background: lightgreen;
+    color: #000;
+  }
+
+  [data-variant="secondary"] {
+    background: blue;
+    color: #fff;
+  }
+</style>

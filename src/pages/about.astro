@@ -1,0 +1,43 @@
+---
+import Base from "../layouts/Base.astro";
+import CardTest from "../components/CardTest.astro";
+import Columns from "../components/Columns.astro";
+---
+
+<Base>
+  <section class="full">
+    <Columns cols="4">
+      <CardTest title="Creative Ideas" variant="primary" />
+      <CardTest title="Best Features" variant="secondary" />
+      <CardTest title="Experience" variant="primary" />
+      <CardTest title="Easy Solutions" variant="secondary" />
+    </Columns>
+    <Columns cols="3">
+      <CardTest title="Creative Ideas" variant="primary" />
+      <CardTest title="Best Features" variant="secondary" />
+      <CardTest title="Experience" variant="primary" />
+    </Columns>
+  </section>
+</Base>
+
+<style>
+  section {
+    background: lightpink;
+
+    display: grid;
+    grid:
+      auto /
+      [full-start] 1fr
+      [content] minmax(0, var(--content-width))
+      1fr [full-end];
+    gap: 1rem;
+
+    > * {
+      grid-column: content;
+    }
+
+    .full {
+      grid-column: full;
+    }
+  }
+</style>
